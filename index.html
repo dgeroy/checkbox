@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Saver</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div id="main-content">
+		<div class="child1">
+			<div class="row">
+				<div class="question animated bounce"><h1>What are your spending priorities?</h1></div>
+			</div>
+			<div class="row">
+				<div class="btn_container">
+					<div class="cb_button animated bounceIn delay-2s"><h3>Item 1</h3><input type="checkbox" id="myCheck"><label for="myCheck"><img src="images/family.png" /></label></div>
+					<div class="cb_button animated bounceIn delay-2s"><h3>Item 2</h3><input type="checkbox" id="myCheck2"><label for="myCheck2"><img src="images/food.png" /></label></div>
+					<div class="cb_button animated bounceIn delay-2s"><h3>Item 3</h3><input type="checkbox" id="myCheck3"><label for="myCheck3"><img src="images/house.png" /></label></div>
+					<div class="cb_button animated bounceIn delay-2s"><h3>Item 4</h3><input type="checkbox" id="myCheck4"><label for="myCheck4"><img src="images/travel.png" /></label></div>
+				</div>
+			</div>
+			
+			<div class="row">			
+				<div class="cart animated shake infinite delay-2s" style="animation-duration: 5s;">
+					<img style="display:none;" id="numpic1" src="numpic" />
+					<img style="display:none;" id="numpic2" src="numpic" />
+					<img style="display:none;" id="numpic3" src="numpic" />
+					<img style="display:none;" id="numpic4" src="numpic" />
+					<img id="shop-dog" class="corgi animated slideInRight" src="images/puppy push cart-01.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+$(document).ready(function () {
+    var ckbox = $('#myCheck');
+    var ckbox2 = $('#myCheck2');
+    var ckbox3 = $('#myCheck3');
+    var ckbox4 = $('#myCheck4');
+
+    var img = $('#numpic1');
+    var img2 = $('#numpic2');
+    var img3 = $('#numpic3');
+    var img4 = $('#numpic4');
+
+    $('input').on('change',function () {
+        if (ckbox.is(':checked')) {
+            //alert('You have Checked it');
+            $(img).css({"display": "block", "position": "absolute", "top": "200px", "left": "20px", "width": "70px", "z-index": "10"  });
+            $(img).attr("src","images/perk_discount.svg");
+        } else {
+            $(img).css({"display": "none"});
+        }
+
+        if ($(ckbox2).prop('checked')==true) {
+        	$(img2).css({"display": "block", "position": "absolute", "top": "200px", "left": "70px", "width": "70px", "z-index": "10"  });
+            $(img2).attr("src","images/perk_discount.svg");
+        } else {
+            $(img2).css({"display": "none"});
+        }
+
+        if ($(ckbox3).prop('checked')==true) {
+        	$(img3).css({"display": "block", "position": "absolute", "top": "160px", "left": "25px","width": "70px", "z-index": "10"  });
+            $(img3).attr("src","images/perk_discount.svg");
+        } else {
+            $(img3).css({"display": "none"});
+        }
+
+        if ($(ckbox4).prop('checked')==true) {
+        	$(img4).css({"display": "block", "position": "absolute", "top": "160px", "left": "75px", "width": "70px", "z-index": "10"  });
+            $(img4).attr("src","images/perk_discount.svg");
+        } else {
+            $(img4).css({"display": "none"});
+        }
+
+    });
+
+});
+</script>
+
+</body>
+
+
+</html>

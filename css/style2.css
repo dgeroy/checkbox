@@ -1,0 +1,190 @@
+/**CSS**/
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+html, body { margin: 0; padding: 0; }
+/*html { height: 100%; } body { min-height: 100%; }*/
+
+body {
+/*background: linear-gradient(180deg,rgba(131,210,228,0.4) 0%,#ffffff 100%);*/
+/*background: #feefe;*/
+/*background: #28a5f5;*/
+background: url('../images/background-q3.png') no-repeat center top;
+background-color: #006899!important;
+font: normal 13px/150% Lato, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  /*color: #006899;*/
+  color: #ffffff;
+  line-height: 40px;
+}
+
+p {
+ font-family: 'Lato', sans-serif;
+ color: #ffffff;
+}
+
+#main-content {
+  position: relative;
+  width: 100%;
+  /*min-height: 66%;
+  max-height: 76%;*/
+  margin: 0 auto;
+}
+
+.content p {
+  text-align: center;
+  padding: 0 56px;
+}
+
+.question {
+  /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);*/
+}
+
+
+input[type="checkbox"][id^="cb"] {
+  /*display: none;*/
+}
+
+label {
+  border: 3px solid #fefefe;
+  padding: 15px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 100%;
+}
+
+label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked+label {
+  /*border-color: #28a5f5;*/
+  border-color: #006899;
+}
+
+:checked+label::before {
+  content: "\2713";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked+label img {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+  border-radius: 100%
+}
+
+#numpic {
+  left: 30px;
+  width: 40px;
+}
+
+.cart {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    /*left: 60px;*/
+}
+
+#myCheck, #myCheck2, #myCheck3, #myCheck4, #myCheck5 {
+  display: none;
+}
+
+.corgi {
+  z-index: -100;
+  position: relative;
+  /*left: 100px;*/
+}
+
+.btn_container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.cb_button {
+  display: inline-block;
+}
+
+ .child1 {
+	position: absolute;
+	width: 100%;
+  margin-top: 10%;
+	/*transform: translateY(10%);*/
+ }
+
+ .row {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+ }
+
+ @keyframes shake2 {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 576px) {
+  #main-content {
+  position: relative;
+ }
+  .child1 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+ }
+
+ .cart {
+  display: none;
+ }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .child1 {
+  margin-top: 20%;
+ }
+}
+
